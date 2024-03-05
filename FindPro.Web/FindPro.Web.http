@@ -1,0 +1,6 @@
+@FindPro.Web_HostAddress = http://localhost:5201
+
+GET {{FindPro.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
