@@ -15,6 +15,11 @@ namespace FindPro.Web.Infrastructure.Configuration
             services.AddScoped<ISkillGroupBllMapper, SkillGroupBllMapper>();
             services.AddScoped<ISkillGroupDtoMapper, SkillGroupDtoMapper>();
             services.AddScoped<ISkillGroupWebMapper, SkillGroupWebMapper>();
+
+            services.AddScoped<ISkillDalMapper, SkillDalMapper>();
+            services.AddScoped<ISkillBllMapper, SkillBllMapper>();
+            services.AddScoped<ISkillDtoMapper, SkillDtoMapper>();
+            services.AddScoped<ISkillWebMapper, SkillWebMapper>();
         }
     }
 }

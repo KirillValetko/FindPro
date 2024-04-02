@@ -9,23 +9,21 @@ namespace FindPro.Web.Infrastructure.Mappers
     [Mapper]
     public partial class SkillGroupWebMapper : ISkillGroupWebMapper
     {
-        [MapperIgnoreSource(nameof(SkillGroupModel.IsUsed))]
-        public partial SkillGroupViewModel Map(SkillGroupModel dbModel);
+        public partial SkillGroupViewModel Map(SkillGroupModel model);
 
-        public SkillGroupModel Map(SkillGroupViewModel dataModel)
+        public SkillGroupModel Map(SkillGroupViewModel viewModel)
         {
             throw new NotImplementedException();
         }
 
-        public partial List<SkillGroupViewModel> Map(List<SkillGroupModel> dbModels);
+        public partial List<SkillGroupViewModel> Map(List<SkillGroupModel> models);
 
-        [MapperIgnoreSource(nameof(SkillGroupModel.IsUsed))]
-        public List<SkillGroupModel> Map(List<SkillGroupViewModel> dataModels)
+        public List<SkillGroupModel> Map(List<SkillGroupViewModel> viewModels)
         {
             throw new NotImplementedException();
         }
 
-        public void Map(SkillGroupViewModel dataModel, SkillGroupModel dbModel)
+        public void Map(SkillGroupViewModel viewModel, SkillGroupModel model)
         {
             throw new NotImplementedException();
         }

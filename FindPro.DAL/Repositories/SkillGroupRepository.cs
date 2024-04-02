@@ -44,10 +44,13 @@ namespace FindPro.DAL.Repositories
                 items = items.Where(skillGroup => skillGroup.GroupName.Contains(filter.GroupName));
             }
 
-            items = items.Include(group => 
-                group.SkillLevels
-                .Where(skillLevel => skillLevel.IsActive && skillLevel.LevelValue != 0)
-                .OrderBy(skillLevel => skillLevel.LevelValue));
+            if (!filter.IncludeSkillLevels.HasValue || filter.IncludeSkillLevels.Value)
+            {
+                items = items.Include(group =>
+                    group.SkillLevels
+                    .Where(skillLevel => skillLevel.IsActive && skillLevel.LevelValue != 0)
+                    .OrderBy(skillLevel => skillLevel.LevelValue));
+            }
 
             return items;
         }
