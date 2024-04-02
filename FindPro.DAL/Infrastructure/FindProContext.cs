@@ -8,6 +8,7 @@ namespace FindPro.DAL.Infrastructure
         public FindProContext(DbContextOptions<FindProContext> options)
         : base(options)
         {
+            ChangeTracker.LazyLoadingEnabled = false;
         }
         
         public DbSet<Employee> Employees { get; set; }

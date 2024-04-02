@@ -7,7 +7,6 @@ using FindPro.DAL.DataModels;
 using FindPro.DAL.Filters;
 using FindPro.DAL.Models;
 using FindPro.DAL.Repositories.Interfaces;
-using FindPro.DAL.Infrastructure.Mappers.Interfaces;
 using FindPro.Common.Interfaces;
 
 namespace FindPro.DAL.Repositories
