@@ -82,7 +82,7 @@ namespace FindPro.BLL.Services
         {
             var skillGroup = await _repository.GetByFilterAsync(new SkillGroupFilter { Id = id });
 
-            if (skillGroup == null)
+            if (skillGroup is null)
             {
                 throw new Exception(ExceptionMessageConstants.EntityIsNotFound);
             }
