@@ -7,6 +7,6 @@
         public Guid GroupId { get; set; }
 
         public SkillGroup SkillGroup { get; set; }
-        public List<GradedSkill> GradedSkills { get; set; }
+        public List<EmployeeSkill> EmployeeSkills { get; set; }
     }
 }
