@@ -5,6 +5,7 @@
         public string LevelName { get; set; }
         public int LevelValue { get; set; }
         public string Description { get; set; }
+        public int GradeRevisionInMonths { get; set; }
         public bool IsUsed { get; set; }
         public Guid GroupId { get; set; }
 
@@ -19,7 +20,8 @@
             return Id == otherSkillLevel.Id
                    && LevelName == otherSkillLevel.LevelName
                    && LevelValue == otherSkillLevel.LevelValue
-                   && Description == otherSkillLevel.Description;
+                   && Description == otherSkillLevel.Description
+                   && GradeRevisionInMonths == otherSkillLevel.GradeRevisionInMonths;
         }
     }
 }
