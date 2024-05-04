@@ -13,7 +13,7 @@ namespace FindPro.DAL.Infrastructure.ModelConfigurations
             builder.HasOne(gs => gs.Employee)
                 .WithMany(e => e.EmployeeSkills)
                 .HasForeignKey(gs => gs.EmployeeId)
-                .OnDelete(DeleteBehavior.NoAction)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
             builder.HasOne(gs => gs.Skill)
                 .WithMany(s => s.EmployeeSkills)
