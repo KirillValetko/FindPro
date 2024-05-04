@@ -72,6 +72,31 @@ namespace FindPro.Web.Controllers
             }
         }
 
+        protected async Task<IActionResult> ProcessRequest(Func<Task<TModel>> func)
+        {
+            try
+            {
+                var result = await func();
+                var mappedResult = _mapper.Map(result);
+
+                return Ok(new ApiResponse<TViewModel>(mappedResult));
+            }
+            catch (SqlException ex)
+            {
+                _logger.LogError(ex.Message);
+                Console.WriteLine(ex.Message);
+
+                return BadRequest(new ApiResponse<TViewModel>(ex.Message));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                Console.WriteLine(ex.Message);
+
+                return BadRequest(new ApiResponse<TViewModel>(ex.Message));
+            }
+        }
+
         protected async Task<IActionResult> ProcessRequest(Func<Task> func)
         {
             try
