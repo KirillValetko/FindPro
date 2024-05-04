@@ -9,6 +9,7 @@ namespace FindPro.Web.Infrastructure.Configuration
         {
             services.AddScoped<ISkillGroupService, SkillGroupService>();
             services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
     }
 }

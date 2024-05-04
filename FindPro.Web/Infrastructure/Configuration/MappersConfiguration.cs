@@ -16,10 +16,17 @@ namespace FindPro.Web.Infrastructure.Configuration
             services.AddScoped<ISkillGroupDtoMapper, SkillGroupDtoMapper>();
             services.AddScoped<ISkillGroupWebMapper, SkillGroupWebMapper>();
 
+            services.AddScoped<ISkillLevelDalMapper, SkillLevelDalMapper>();
+
             services.AddScoped<ISkillDalMapper, SkillDalMapper>();
             services.AddScoped<ISkillBllMapper, SkillBllMapper>();
             services.AddScoped<ISkillDtoMapper, SkillDtoMapper>();
             services.AddScoped<ISkillWebMapper, SkillWebMapper>();
+
+            services.AddScoped<IEmployeeDalMapper, EmployeeDalMapper>();
+            services.AddScoped<IEmployeeBllMapper, EmployeeBllMapper>();
+            services.AddScoped<IEmployeeDtoMapper, EmployeeDtoMapper>();
+            services.AddScoped<IEmployeeWebMapper, EmployeeWebMapper>();
         }
     }
 }

@@ -9,7 +9,9 @@ namespace FindPro.Web.Infrastructure.Configuration
         public static void InitHelpers(this IServiceCollection services)
         {
             services.AddScoped<IPaginationHelper<SkillGroup>, PaginationHelper<SkillGroup>>();
+            services.AddScoped<IPaginationHelper<SkillLevel>, PaginationHelper<SkillLevel>>();
             services.AddScoped<IPaginationHelper<Skill>, PaginationHelper<Skill>>();
+            services.AddScoped<IPaginationHelper<Employee>, PaginationHelper<Employee>>();
         }
     }
 }
