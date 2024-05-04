@@ -20,7 +20,7 @@ namespace FindPro.DAL.Infrastructure.ModelConfigurations
             builder.HasOne(g => g.EmployeeSkill)
                 .WithMany(es => es.Grades)
                 .HasForeignKey(g => g.EmployeeSkillId)
-                .OnDelete(DeleteBehavior.NoAction)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
         }
     }
